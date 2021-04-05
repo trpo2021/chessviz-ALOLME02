@@ -1,8 +1,8 @@
 #ifndef MOVE_PAWN_H
 #define MOVE_PAWN_H
 
-#include "verification.h"
 #include "board.h"
+#include "verification.h"
 
 void assigment(Piece num, Board* cl, char* str);
 void attack_Pawn(Piece num, Board* cl, char* str);
