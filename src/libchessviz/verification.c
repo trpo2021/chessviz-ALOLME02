@@ -41,12 +41,14 @@ bool color_attack_Pawn_White(Board* cl, char* str)
     if (islower(point_after_move(cl, str))) {
         return true;
     }
+    return false;
 }
 bool color_attack_Pawn_Black(Board* cl, char* str)
 {
     if (isupper(point_after_move(cl, str))) {
         return true;
-    }
+    } 
+    return false;
 }
 int pawn_isfirstmove(Board* cl, char* str)
 {
