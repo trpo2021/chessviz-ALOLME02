@@ -2,6 +2,7 @@
 #define MOVE_PAWN_H
 
 #include "verification.h"
+#include "board.h"
 
 void assigment(Piece num, Board* cl, char* str);
 void attack_Pawn(Piece num, Board* cl, char* str);

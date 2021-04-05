@@ -1,3 +1,4 @@
+#include "Move_pawn.h"
 void assigment(Piece num, Board* cl, char* str)
 {
     int x1;
