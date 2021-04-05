@@ -16,7 +16,6 @@ typedef enum {
     B_Pawn = 'p'
 } Piece;
 
-
 typedef struct {
     Piece board[8][8];
 } Board;

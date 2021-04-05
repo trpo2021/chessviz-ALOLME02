@@ -9,18 +9,15 @@ void Figure_Select_Move(Board* cl, char* str, int s)
     }
 }
 
-
 void Move(Board* cl)
 {
     char str[MAX];
     int End = 0;
     int First_Count = 1, Second_Count = 0;
-    while (End == 0)
-    {
+    while (End == 0) {
         ++Second_Count;
         printf("%d. ", First_Count);
-        do
-        {
+        do {
             fgets(str, 21, stdin);
         } while (!input(cl, str, Second_Count));
         Figure_Select_Move(cl, str, Second_Count);
@@ -28,9 +25,5 @@ void Move(Board* cl)
             ++First_Count;
         }
         Print_Board(cl);
-        
     }
-    
-    
-
 }
