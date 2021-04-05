@@ -1,2 +1,4 @@
 *.txt
 chessviz
+bin/chessviz
+obj/*
