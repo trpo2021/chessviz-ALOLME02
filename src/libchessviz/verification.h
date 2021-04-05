@@ -6,6 +6,7 @@
 
 #include <ctype.h>
 #include <stdbool.h>
+#include <stdlib.h>
 
 #include "board_type.h"
 
@@ -23,4 +24,5 @@ bool Pawn_Walk(Board* cl, char* str,int z, int w, int g,int q);
 bool attack_Pawn_Border_check(Board* cl, char* str,int z, int w, int g,int q);
 bool check_border_piece(Board* cl, char* str);
 bool input(Board* cl, char* str, int num);
+
 #endif
