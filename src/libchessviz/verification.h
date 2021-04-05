@@ -1,8 +1,8 @@
 #ifndef VERIFICATION_H
 #define VERIFICATION_H
 
-#define BORDER_Y(x, y) x >= 'a' && x <= 'h' && y >= 'a' && y <= 'h'
-#define BORDER_X(x, y) x >= '1' && x <= '8' && y >= '1' && y <= '8'
+#define B_Y(x, y) x >= 'a' && x <= 'h' && y >= 'a' && y <= 'h'
+#define B_X(x, y) x >= '1' && x <= '8' && y >= '1' && y <= '8'
 
 #include <ctype.h>
 #include <stdbool.h>
