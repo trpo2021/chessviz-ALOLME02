@@ -1,4 +1,3 @@
-
 #ifndef MOVE_KING_H
 #define MOVE_KING_H
 
