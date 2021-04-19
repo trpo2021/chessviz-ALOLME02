@@ -6,6 +6,21 @@ void Figure_Select_Move(Board* cl, char* str, int s)
     case ' ':
         Move_Pawn(cl, str, s);
         break;
+    case 'N':
+        Move_Knight(cl, str, s);
+        break;
+    case 'R':
+        Move_Rook(cl, str, s);
+        break;
+    case 'B':
+        Move_Bishop(cl, str, s);
+        break;
+    case 'K':
+        Move_King(cl, str, s);
+        break;
+    case 'Q':
+        Move_Queen(cl, str, s);
+        break;
     }
 }
 
