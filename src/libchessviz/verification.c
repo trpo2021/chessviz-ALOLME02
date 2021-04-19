@@ -47,7 +47,7 @@ bool color_attack_Pawn_Black(Board* cl, char* str)
 {
     if (isupper(point_after_move(cl, str))) {
         return true;
-    } 
+    }
     return false;
 }
 int pawn_isfirstmove(Board* cl, char* str)
@@ -76,6 +76,60 @@ bool Pawn_Walk(Board* cl, char* str, int z, int w, int g, int q)
 bool attack_Pawn_Border_check(Board* cl, char* str, int z, int w, int g, int q)
 {
     if ((abs(z - w) == 1) && (abs(g - q) == 1)) {
+        return true;
+    }
+    return false;
+}
+bool Verific_Bishop(Board* cl, char* str, int z, int w, int g, int q)
+{
+    if ((abs(z - w) == 1 && abs(g - q) == 1)
+        || (abs(z - w) == 2 && abs(g - q) == 2)
+        || (abs(z - w) == 3 && abs(g - q) == 3)
+        || (abs(z - w) == 4 && abs(g - q) == 4)
+        || (abs(z - w) == 5 && abs(g - q) == 5)
+        || (abs(z - w) == 6 && abs(g - q) == 6)
+        || (abs(z - w) == 7 && abs(g - q) == 7)
+        || (abs(z - w) == 8 && abs(g - q) == 8)) {
+        return true;
+    }
+    return false;
+}
+bool Verific_Rook(Board* cl, char* str, int z, int w, int g, int q)
+{
+    if ((abs(z - w <= 8) && abs(q - g) == 0)
+        || (abs(z - w == 0) && abs(q - g) <= 8)) {
+        return true;
+    }
+    return false;
+}
+bool Verific_King(Board* cl, char* str, int z, int w, int g, int q)
+{
+    if ((abs(z - w) == 1 && abs(q - g) == 0)
+        || (abs(z - w) == 0 && abs(q - g) == 1)
+        || (abs(z - w) == 1 && abs(g - q) == 1)) {
+        return true;
+    }
+    return false;
+}
+Verific_Queen(Board* cl, char* str, int z, int w, int g, int q)
+{
+    if ((abs(z - w) == 1 && abs(g - q) == 1)
+        || (abs(z - w) == 2 && abs(g - q) == 2)
+        || (abs(z - w) == 3 && abs(g - q) == 3)
+        || (abs(z - w) == 4 && abs(g - q) == 4)
+        || (abs(z - w) == 5 && abs(g - q) == 5)
+        || (abs(z - w) == 6 && abs(g - q) == 6)
+        || (abs(z - w) == 7 && abs(g - q) == 7)
+        || (abs(z - w) == 8 && abs(g - q) == 8)
+        || (abs(z - w <= 8) && abs(q - g) == 0)
+        || (abs(z - w == 0) && abs(q - g) <= 8)) {
+        return true;
+    }
+    return false;
+}
+bool Verific_Knight(Board* cl, char* str, int z, int w, int g, int q)
+{
+    if ((abs(z - w) == 1) && (abs(g - q) == 2)) {
         return true;
     }
     return false;
@@ -154,7 +208,7 @@ bool check_border_piece(Board* cl, char* str)
     if (str[5] == '8')
         x2 = 0;
     switch (str[0]) {
-    case ' ':
+    case ' ': {
         if (!P_check_border(cl, str)) {
             return false;
         }
@@ -171,7 +225,34 @@ bool check_border_piece(Board* cl, char* str)
         }
         break;
     }
-    return true;
+    case 'N': {
+        if (!Verific_Knight(cl, str, y1, y2, x1, x2))
+            return false;
+        break;
+    }
+    case 'R': {
+        if (!Verific_Rook(cl, str, y1, y2, x1, x2))
+            return false;
+        break;
+    }
+    case 'B': {
+        if (!Verific_Bishop(cl, str, y1, y2, x1, x2))
+            return false;
+        break;
+    }
+    case 'K': {
+        if (!Verific_King(cl, str, y1, y2, x1, x2))
+            return false;
+        break;
+    }
+    case 'Q': {
+        if (!Verific_Queen(cl, str, y1, y2, x1, x2))
+            return false;
+        break;
+    }
+
+        return true;
+    }
 }
 bool input(Board* cl, char* str, int num)
 {
