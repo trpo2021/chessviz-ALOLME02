@@ -1,6 +1,11 @@
 #ifndef MOVE_H
 #define MOVE_H
 
+#include "Move_Bishop.h"
+#include "Move_King.h"
+#include "Move_Knight.h"
+#include "Move_Queen.h"
+#include "Move_Rook.h"
 #include "Move_pawn.h"
 #include "verification.h"
 
