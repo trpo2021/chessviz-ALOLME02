@@ -19,7 +19,7 @@ bool Verific_Queen(Board* cl, char* str, int z, int w, int g, int q);
 bool Verific_Knight(Board* cl, char* str, int z, int w, int g, int q);
 bool isempty(Board* cl, char* str);
 bool check_border(char* str);
-bool my_figure(Board* cl, char* str, int num);
+bool my_verific(Board* cl, char* str, int num);
 bool whose(int num);
 bool color_attack_Pawn_White(Board* cl, char* str);
 bool color_attack_Pawn_Black(Board* cl, char* str);
