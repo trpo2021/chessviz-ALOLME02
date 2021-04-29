@@ -17,7 +17,7 @@ bool check_border(char* str)
     }
     return false;
 }
-bool my_figure(Board* cl, char* str, int num)
+bool my_verific(Board* cl, char* str, int num)
 {
     if (num % 2 == 1 && isupper(point_before_move(cl, str))) {
         return true;
@@ -263,7 +263,7 @@ bool input(Board* cl, char* str, int num)
         printf("The first field is worthless. \n Try again. \n\n");
         return false;
     }
-    if (!my_figure(cl, str, num)) {
+    if (!my_verific(cl, str, num)) {
         printf("You are not walking with your shapes.\nTry again.\n\n");
         return false;
     }
