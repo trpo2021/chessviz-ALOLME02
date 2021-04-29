@@ -1,5 +1,5 @@
-#ifndef MOVE_PAWN_H
-#define MOVE_PAWN_H
+#ifndef MOVE_ROOK_H
+#define MOVE_ROOK_H
 
 #include "board.h"
 #include "verification.h"

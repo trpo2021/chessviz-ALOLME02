@@ -111,7 +111,7 @@ bool Verific_King(Board* cl, char* str, int z, int w, int g, int q)
     }
     return false;
 }
-Verific_Queen(Board* cl, char* str, int z, int w, int g, int q)
+bool Verific_Queen(Board* cl, char* str, int z, int w, int g, int q)
 {
     if ((abs(z - w) == 1 && abs(g - q) == 1)
         || (abs(z - w) == 2 && abs(g - q) == 2)
@@ -250,9 +250,8 @@ bool check_border_piece(Board* cl, char* str)
             return false;
         break;
     }
-
-        return true;
     }
+    return true;
 }
 bool input(Board* cl, char* str, int num)
 {
