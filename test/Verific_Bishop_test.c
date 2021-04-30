@@ -20,5 +20,4 @@ CTEST(Verific_Bishop_test, Verific_Bishop)
     ASSERT_TRUE(Verific_Bishop(&cl, str6, 3, 4, 4, 5));
     char str7[] = "Ba1-h8";
     ASSERT_TRUE(Verific_Bishop(&cl, str7, 0, 7, 7, 0));
-    
 }
