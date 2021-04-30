@@ -1,6 +1,6 @@
 #include "Move_Queen.h"
 
-Queen_Walk(Piece num, Board* cl, char* str)
+void Queen_Walk(Piece num, Board* cl, char* str)
 {
     int x1;
     int y1;

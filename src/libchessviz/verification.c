@@ -17,7 +17,7 @@ bool check_border(char* str)
     }
     return false;
 }
-bool my_figure(Board* cl, char* str, int num)
+bool my_verific(Board* cl, char* str, int num)
 {
     if (num % 2 == 1 && isupper(point_before_move(cl, str))) {
         return true;
@@ -68,14 +68,14 @@ bool P_check_border(Board* cl, char* str)
 }
 bool Pawn_Walk(Board* cl, char* str, int z, int w, int g, int q)
 {
-    if ((abs(z - w) == 0) && (abs(g - q) <= 2)) {
+    if ((abs(z - w) == 0) && (g - q <= 2)) {
         return true;
     }
     return false;
 }
 bool attack_Pawn_Border_check(Board* cl, char* str, int z, int w, int g, int q)
 {
-    if ((abs(z - w) == 1) && (abs(g - q) == 1)) {
+    if ((abs(z - w) == 1) && (g - q == 1)) {
         return true;
     }
     return false;
@@ -111,7 +111,7 @@ bool Verific_King(Board* cl, char* str, int z, int w, int g, int q)
     }
     return false;
 }
-Verific_Queen(Board* cl, char* str, int z, int w, int g, int q)
+bool Verific_Queen(Board* cl, char* str, int z, int w, int g, int q)
 {
     if ((abs(z - w) == 1 && abs(g - q) == 1)
         || (abs(z - w) == 2 && abs(g - q) == 2)
@@ -129,7 +129,7 @@ Verific_Queen(Board* cl, char* str, int z, int w, int g, int q)
 }
 bool Verific_Knight(Board* cl, char* str, int z, int w, int g, int q)
 {
-    if ((abs(z - w) == 1) && (abs(g - q) == 2)) {
+    if (((abs(z - w) == 1) && (abs(g - q) == 2)) || ((abs(z - w) == 2) && (abs(g - q) == 1))) {
         return true;
     }
     return false;
@@ -250,9 +250,8 @@ bool check_border_piece(Board* cl, char* str)
             return false;
         break;
     }
-
-        return true;
     }
+    return true;
 }
 bool input(Board* cl, char* str, int num)
 {
@@ -264,7 +263,7 @@ bool input(Board* cl, char* str, int num)
         printf("The first field is worthless. \n Try again. \n\n");
         return false;
     }
-    if (!my_figure(cl, str, num)) {
+    if (!my_verific(cl, str, num)) {
         printf("You are not walking with your shapes.\nTry again.\n\n");
         return false;
     }

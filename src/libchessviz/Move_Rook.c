@@ -1,4 +1,5 @@
 #include "Move_Rook.h"
+
 void Rook_Walk(Piece num, Board* cl, char* str)
 {
     int x1;
