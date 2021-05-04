@@ -1,5 +1,5 @@
 #include "Setting_Field.h"
-int Seting_Field_x(char* str)
+int Setting_Field_x(char* str)
 {
     int x1;
     if (str[2] == '1')
@@ -20,7 +20,7 @@ int Seting_Field_x(char* str)
         x1 = 0;
     return x1;
 }
-int Seting_Field_y(char* str)
+int Setting_Field_y(char* str)
 {
     int y1;
     if (str[1] == 'a')

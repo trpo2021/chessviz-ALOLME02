@@ -6,10 +6,10 @@ void Bishop_Walk(Piece num, Board* cl, char* str)
     int y1;
     int x2;
     int y2;
-    x1 = Seting_Field_x(str);
-    y1 = Seting_Field_y(str);
-    x2 = Seting_Field_x2(str);
-    y2 = Seting_Field_y2(str);
+    x1 = Setting_Field_x(str);
+    y1 = Setting_Field_y(str);
+    x2 = Setting_Field_x2(str);
+    y2 = Setting_Field_y2(str);
     if (Verific_Bishop(cl, str, y1, y2, x1, x2)) {
         cl->board[x1][y1] = None;
         cl->board[x2][y2] = num;

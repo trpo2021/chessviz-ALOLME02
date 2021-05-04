@@ -141,10 +141,10 @@ bool check_border_piece(Board* cl, char* str)
     int y1;
     int x2;
     int y2;
-    x1 = Seting_Field_x(str);
-    y1 = Seting_Field_y(str);
-    x2 = Seting_Field_x2(str);
-    y2 = Seting_Field_y2(str);
+    x1 = Setting_Field_x(str);
+    y1 = Setting_Field_y(str);
+    x2 = Setting_Field_x2(str);
+    y2 = Setting_Field_y2(str);
     switch (str[0]) {
     case ' ': {
         if (!P_check_border(cl, str)) {
