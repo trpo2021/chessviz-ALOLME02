@@ -83,7 +83,7 @@ int Setting_Field_y(char* str)
         y1 = 7;
     return y1;
 }
-int Seting_Field_x2(char* str)
+int Setting_Field_x2(char* str)
 {
     int x2;
     if (str[2] == '1')
@@ -104,7 +104,7 @@ int Seting_Field_x2(char* str)
         x2 = 0;
     return x2;
 }
-int Seting_Field_y2(char* str)
+int Setting_Field_y2(char* str)
 {
     int y2;
     if (str[1] == 'a')
