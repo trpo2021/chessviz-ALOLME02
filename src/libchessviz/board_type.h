@@ -1,5 +1,6 @@
 #ifndef BOARD_TYPE_H
 #define BOARD_TYPE_H
+
 typedef enum {
     None = ' ',
     W_King = 'K',
