@@ -8,9 +8,8 @@
 #include <stdbool.h>
 #include <stdlib.h>
 
-#include "board_type.h"
-#include "board_type.h"
 #include "board.h"
+#include "board_type.h"
 
 bool Verific_Bishop(Board* cl, char* str, int z, int w, int g, int q);
 bool Verific_Rook(Board* cl, char* str, int z, int w, int g, int q);

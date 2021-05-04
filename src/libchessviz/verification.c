@@ -129,7 +129,8 @@ bool Verific_Queen(Board* cl, char* str, int z, int w, int g, int q)
 }
 bool Verific_Knight(Board* cl, char* str, int z, int w, int g, int q)
 {
-    if (((abs(z - w) == 1) && (abs(g - q) == 2)) || ((abs(z - w) == 2) && (abs(g - q) == 1))) {
+    if (((abs(z - w) == 1) && (abs(g - q) == 2))
+        || ((abs(z - w) == 2) && (abs(g - q) == 1))) {
         return true;
     }
     return false;
