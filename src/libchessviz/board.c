@@ -86,42 +86,42 @@ int Setting_Field_y(char* str)
 int Setting_Field_x2(char* str)
 {
     int x2;
-    if (str[2] == '1')
+    if (str[5] == '1')
         x2 = 7;
-    if (str[2] == '2')
+    if (str[5] == '2')
         x2 = 6;
-    if (str[2] == '3')
+    if (str[5] == '3')
         x2 = 5;
-    if (str[2] == '4')
+    if (str[5] == '4')
         x2 = 4;
-    if (str[2] == '5')
+    if (str[5] == '5')
         x2 = 3;
-    if (str[2] == '6')
+    if (str[5] == '6')
         x2 = 2;
-    if (str[2] == '7')
+    if (str[5] == '7')
         x2 = 1;
-    if (str[2] == '8')
+    if (str[5] == '8')
         x2 = 0;
     return x2;
 }
 int Setting_Field_y2(char* str)
 {
     int y2;
-    if (str[1] == 'a')
+    if (str[4] == 'a')
         y2 = 0;
-    if (str[1] == 'b')
+    if (str[4] == 'b')
         y2 = 1;
-    if (str[1] == 'c')
+    if (str[4] == 'c')
         y2 = 2;
-    if (str[1] == 'd')
+    if (str[4] == 'd')
         y2 = 3;
-    if (str[1] == 'e')
+    if (str[4] == 'e')
         y2 = 4;
-    if (str[1] == 'f')
+    if (str[4] == 'f')
         y2 = 5;
-    if (str[1] == 'g')
+    if (str[4] == 'g')
         y2 = 6;
-    if (str[1] == 'h')
+    if (str[4] == 'h')
         y2 = 7;
     return y2;
 }
@@ -136,10 +136,10 @@ Piece point_before_move(Board* cl, char* str)
 }
 Piece point_after_move(Board* cl, char* str)
 {
-    int x2;
-    x2 = Setting_Field_x2(str);
-    int y2;
-    y2 = Setting_Field_y2(str);
+    int x1;
+    x1 = Setting_Field_x2(str);
+    int y1;
+    y1 = Setting_Field_y2(str);
 
-    return cl->board[x2][y2];
+    return cl->board[x1][y1];
 }
