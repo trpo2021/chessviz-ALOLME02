@@ -3,12 +3,12 @@
 void King_Walk(Piece num, Board* cl, char* str)
 {
     int x1;
-    int y1;
-    int x2;
-    int y2;
     x1 = Seting_Field_x(str);
+    int y1;
     y1 = Seting_Field_y(str);
+    int x2;
     x2 = Seting_Field_x2(str);
+    int y2;
     y2 = Seting_Field_y2(str);
     if (Verific_King(cl, str, y1, y2, x1, x2)) {
         if ((cl->board[x2][y2] != B_King) && (cl->board[x2][y2] != W_King))
