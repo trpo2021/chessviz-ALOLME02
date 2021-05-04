@@ -1,4 +1,3 @@
-
 CC = gcc
 CFLAGS = -Wall -Werror
 CPPFLAGS = -I src -MMD
