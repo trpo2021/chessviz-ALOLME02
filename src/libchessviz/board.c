@@ -41,105 +41,63 @@ void Print_Board(Board* cl)
     }
     printf(" abcdefgh\t");
 }
-int Setting_Field_x(char* str)
+int Setting_Field_x(char* str, int number_str)
 {
     int x1;
-    if (str[2] == '1')
+    if (str[number_str] == '1')
         x1 = 7;
-    if (str[2] == '2')
+    if (str[number_str] == '2')
         x1 = 6;
-    if (str[2] == '3')
+    if (str[number_str] == '3')
         x1 = 5;
-    if (str[2] == '4')
+    if (str[number_str] == '4')
         x1 = 4;
-    if (str[2] == '5')
+    if (str[number_str] == '5')
         x1 = 3;
-    if (str[2] == '6')
+    if (str[number_str] == '6')
         x1 = 2;
-    if (str[2] == '7')
+    if (str[number_str] == '7')
         x1 = 1;
-    if (str[2] == '8')
+    if (str[number_str] == '8')
         x1 = 0;
     return x1;
 }
-int Setting_Field_y(char* str)
+int Setting_Field_y(char* str, int number_str)
 {
     int y1;
-    if (str[1] == 'a')
+    if (str[number_str] == 'a')
         y1 = 0;
-    if (str[1] == 'b')
+    if (str[number_str] == 'b')
         y1 = 1;
-    if (str[1] == 'c')
+    if (str[number_str] == 'c')
         y1 = 2;
-    if (str[1] == 'd')
+    if (str[number_str] == 'd')
         y1 = 3;
-    if (str[1] == 'e')
+    if (str[number_str] == 'e')
         y1 = 4;
-    if (str[1] == 'f')
+    if (str[number_str] == 'f')
         y1 = 5;
-    if (str[1] == 'g')
+    if (str[number_str] == 'g')
         y1 = 6;
-    if (str[1] == 'h')
+    if (str[number_str] == 'h')
         y1 = 7;
     return y1;
-}
-int Setting_Field_x2(char* str)
-{
-    int x2;
-    if (str[5] == '1')
-        x2 = 7;
-    if (str[5] == '2')
-        x2 = 6;
-    if (str[5] == '3')
-        x2 = 5;
-    if (str[5] == '4')
-        x2 = 4;
-    if (str[5] == '5')
-        x2 = 3;
-    if (str[5] == '6')
-        x2 = 2;
-    if (str[5] == '7')
-        x2 = 1;
-    if (str[5] == '8')
-        x2 = 0;
-    return x2;
-}
-int Setting_Field_y2(char* str)
-{
-    int y2;
-    if (str[4] == 'a')
-        y2 = 0;
-    if (str[4] == 'b')
-        y2 = 1;
-    if (str[4] == 'c')
-        y2 = 2;
-    if (str[4] == 'd')
-        y2 = 3;
-    if (str[4] == 'e')
-        y2 = 4;
-    if (str[4] == 'f')
-        y2 = 5;
-    if (str[4] == 'g')
-        y2 = 6;
-    if (str[4] == 'h')
-        y2 = 7;
-    return y2;
 }
 Piece point_before_move(Board* cl, char* str)
 {
     int x1;
-    x1 = Setting_Field_x(str);
+    x1 = Setting_Field_x(str, 2);
     int y1;
-    y1 = Setting_Field_y(str);
+    y1 = Setting_Field_y(str, 1);
 
     return cl->board[x1][y1];
 }
 Piece point_after_move(Board* cl, char* str)
 {
     int x1;
-    x1 = Setting_Field_x2(str);
+    x1 = Setting_Field_x(str, 5);
     int y1;
-    y1 = Setting_Field_y2(str);
+    y1 = Setting_Field_y(str, 4);
 
     return cl->board[x1][y1];
 }
